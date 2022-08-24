@@ -21,8 +21,8 @@ describe Sulfuras do
     end
   end
 
-  context "when updating quality and sign_in values" do
-    it "the quality and sing_in values remains the same" do
+  context "when updating quality and sell_in values" do
+    it "the quality and sell_in values remains the same" do
       item = Sulfuras.new('sulfuras', 2, 30)
       item.update_quality_and_sell_in
       expect(item.sell_in).to eq 2
