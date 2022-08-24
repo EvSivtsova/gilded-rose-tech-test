@@ -12,9 +12,23 @@ class Item
   def to_string
     "#{@name}, #{@sell_in}, #{@quality}"
   end
+
+  def update_quality_and_sell_in
+    update_sell_in
+    update_quality
+  end
   
   private
+  
+  def update_quality
+    @quality -= 1 if @sell_in >= 0
+    @quality -= 2 if @sell_in.negative?
+  end
 
+  def update_sell_in
+    @sell_in -= 1
+  end
+  
   def input_validation(name, sell_in, quality)
     name_validation(name)
     sell_in_validation(sell_in)
