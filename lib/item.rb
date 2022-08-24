@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :name, :sell_in, :quality
+  attr_reader :name, :sell_in, :quality
 
   def initialize(name, sell_in, quality)
     input_validation(name, sell_in, quality)
