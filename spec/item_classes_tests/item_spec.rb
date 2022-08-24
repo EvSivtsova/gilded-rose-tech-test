@@ -20,7 +20,7 @@ describe Item do
     end
   end
 
-  context "when updating quality and sign_in values before the sell_in date" do
+  context "when updating quality and sell_in values before the sell by date" do
     it "reduces the quality value by 1" do
       item = Item.new('orange juice', 10, 30)
       item.update_quality_and_sell_in
@@ -32,7 +32,7 @@ describe Item do
     end
   end
 
-  context "when updating quality and sign_in values after the sell_in date" do
+  context "when updating quality and sell_in values after the sell by date" do
     it "reduces the quality value by 2" do
       item = Item.new('orange juice', 1, 30)
       item.update_quality_and_sell_in
