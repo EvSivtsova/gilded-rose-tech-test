@@ -20,8 +20,8 @@ describe Item do
     end
   end
 
-  context "when updating quality and sign_in values for standard items" do
-    it "reduces the quality value by 1 until the sell by date" do
+  context "when updating quality and sign_in values before the sell_in date" do
+    it "reduces the quality value by 1" do
       item = Item.new('orange juice', 10, 30)
       item.update_quality_and_sell_in
       expect(item.sell_in).to eq 9
@@ -30,8 +30,10 @@ describe Item do
       expect(item.sell_in).to eq 8
       expect(item.quality).to eq 28
     end
+  end
 
-    it "reduces the quality value by 2 after the sell by date has passed" do
+  context "when updating quality and sign_in values after the sell_in date" do
+    it "reduces the quality value by 2" do
       item = Item.new('orange juice', 1, 30)
       item.update_quality_and_sell_in
       expect(item.sell_in).to eq 0
