@@ -8,6 +8,11 @@ describe AgedBrie do
       expect(AgedBrie).to be < Item
     end
 
+    it "constructs and returns item's attributes as a string" do
+      item = AgedBrie.new('aged brie', 10, 30)
+      expect(item.to_string).to eq "aged brie, 10, 30"
+    end
+
     it "fails to construct if any of the arguments are missing and raises an Argument error" do
       expect { AgedBrie.new('10', '30') }.to raise_error(ArgumentError)
     end
@@ -21,7 +26,7 @@ describe AgedBrie do
     end
   end
 
-  context "when updating quality and sign_in values" do
+  context "when updating quality and sell_in values" do
     it "the quality increases regardless of the sell_in" do
       item = AgedBrie.new('aged brie', 2, 30)
       item.update_quality_and_sell_in

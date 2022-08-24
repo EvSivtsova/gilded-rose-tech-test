@@ -8,6 +8,11 @@ describe Sulfuras do
       expect(Sulfuras).to be < Item
     end
 
+    it "constructs and returns item's attributes as a string" do
+      item = Sulfuras.new('sulfuras', 10, 30)
+      expect(item.to_string).to eq "sulfuras, 10, 30"
+    end
+
     it "fails to construct if any of the arguments are missing and raises an Argument error" do
       expect { Sulfuras.new('10', '30') }.to raise_error(ArgumentError)
     end
