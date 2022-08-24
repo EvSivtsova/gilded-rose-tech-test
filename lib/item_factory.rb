@@ -31,6 +31,7 @@ class ItemFactory
   private
   
   def identify_type(name)
+    raise "Item's name must be a string" if name.instance_of?(String) == false
     @item_types.map do |key, type|
       return type if name.downcase.match?(key)
     end
