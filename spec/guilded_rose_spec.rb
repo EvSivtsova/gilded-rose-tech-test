@@ -7,7 +7,8 @@ describe GuildedRose do
     items_array = [['Aged Brie', 10, 30],
                 ['Sulfuras, Hand of Ragnaros', 6, 40],
                 ['Backstage passes to a TAFKAL80ETC concert', 8, 10],
-                ['Random item', 10, 10]]
+                ['Random item', 10, 10],
+                ['Conjured', 10, 10]]
     factory = ItemFactory.new
     factory.create_items(items_array)
     guilded_rose = GuildedRose.new(factory.items)
@@ -16,6 +17,7 @@ describe GuildedRose do
     expect(guilded_rose.items[1].to_string).to eq 'Sulfuras, Hand of Ragnaros, 6, 40'
     expect(guilded_rose.items[2].to_string).to eq 'Backstage passes to a TAFKAL80ETC concert, 7, 12'
     expect(guilded_rose.items[3].to_string).to eq 'Random item, 9, 9'
+    expect(guilded_rose.items[4].to_string).to eq 'Conjured, 9, 8'
   end
 
   context "when input is incorrect" do
