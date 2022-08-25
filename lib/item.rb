@@ -17,9 +17,9 @@ class Item
     update_sell_in
     update_quality
   end
-  
+
   private
-  
+
   def update_quality
     @quality -= 1 if @sell_in >= 0
     @quality -= 2 if @sell_in.negative?
@@ -28,7 +28,7 @@ class Item
   def update_sell_in
     @sell_in -= 1
   end
-  
+
   def input_validation(name, sell_in, quality)
     name_validation(name)
     sell_in_validation(sell_in)
