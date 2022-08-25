@@ -2,6 +2,7 @@ require_relative './item'
 require_relative './sulfuras'
 require_relative './aged_brie'
 require_relative './backstage_pass'
+require_relative './conjured'
 
 class ItemFactory
   attr_reader :item_types, :items
@@ -10,7 +11,8 @@ class ItemFactory
     @item_types = {
       /aged brie/ => AgedBrie,
       /sulfuras/ => Sulfuras,
-      /backstage pass/ => BackstagePass
+      /backstage pass/ => BackstagePass,
+      /conjured/ => Conjured
     }
     @items = []
   end

@@ -88,6 +88,20 @@ describe ItemFactory do
       expect(item.sell_in).to eq 19
       expect(item.quality).to eq 29
     end
+
+    it "identify 'Conjured' type and uses Conjured Class to instantiate the instance" do
+      factory = ItemFactory.new
+      item = factory.create_one_item('Conjured', 20, 30)
+      expect(item).to be_an_instance_of Conjured
+      expect(item).not_to be_an_instance_of Item
+      expect(item).not_to be_an_instance_of BackstagePass
+      expect(item).not_to be_an_instance_of Sulfuras
+      expect(item).not_to be_an_instance_of AgedBrie
+      expect(item.to_string).to eq "Conjured, 20, 30"
+      item.update_quality_and_sell_in
+      expect(item.sell_in).to eq 19
+      expect(item.quality).to eq 28
+    end
   end
 
   context "when creating new objects from an array" do
@@ -95,7 +109,8 @@ describe ItemFactory do
       items_array = [['Aged Brie', 10, 30],
                  ['Sulfuras, Hand of Ragnaros', 6, 40],
                  ['Backstage passes to a TAFKAL80ETC concert', 8, 10],
-                 ['Random item', 10, 10]]
+                 ['Random item', 10, 10],
+                 ['Conjured', 10, 10]]
       factory = ItemFactory.new
       factory.create_items(items_array)
       factory.items
@@ -103,6 +118,7 @@ describe ItemFactory do
       expect(factory.items[1]).to be_an_instance_of Sulfuras
       expect(factory.items[2]).to be_an_instance_of BackstagePass
       expect(factory.items[3]).to be_an_instance_of Item
+      expect(factory.items[4]).to be_an_instance_of Conjured
     end
 
     it "fails to create an array if any of the arguments are missing and raises an Argument error" do
