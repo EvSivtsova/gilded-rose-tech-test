@@ -16,7 +16,8 @@ class ItemFactory
   end
   
   def create_items(items_array)
-    items_array.each do |item| 
+    items_array.each do |item|
+      raise "Please make sure that each item contains three values" if item.length != 3
       item = create_one_item(item[0], item[1], item[2]) 
       @items << item
     end
