@@ -45,12 +45,16 @@ _So that we sell only quality products_<br>
 **_I want to ensure that the quality of the products degrades twice as fast after sell by date_**
 
 _As a user,_<br>
+_So that I never undersell 'Aged Brie'_<br>
+**_I want to increase its quality as it gets older_**
+
+_As a user,_<br>
 _So that I never undersell 'Sulfuras'_<br>
 **_I want to keep its quality the same until it is sold_**
 
 _As a user,_<br>
-_So that I never undersell 'Baackstage passes'_<br>
-**_I want to icrease their quality by 2 and by 3 when there are 10 or 5 days left until sell by date respectively and then drop it to 0_**
+_So that I never undersell 'Backstage passes'_<br>
+**_I want to icrease their quality by 1, 2 and 3 when there are more than 10, less than 10 or 5 days left respectively until sell by date and then drop it to 0_**
 
 _As a user,_<br>
 _So that we sell only quality products_<br>
@@ -72,6 +76,9 @@ git clone https://github.com/EvSivtsova/guilded_rose_tech_test.git
 cd guilded_rose_tech_test
 bundle install
 ```
+To run the file and print the bank statement required:
+
+`ruby guilded_rose.rb`
 
 To run tests and lint the code use:
 
@@ -80,3 +87,37 @@ To run tests and lint the code use:
 `rubocop`
 
 ## Code design
+
+The legacy code was not easy to read and didn't allow for easy modification in case of specifications' change.
+
+Using the concept of polymorphism four classes have been created to update the quality and sell_in values for each product type:
+
+1. Item class for standard items
+2. Sulfuras class for 'Sulfuras, Hand of Ragnaros' items
+3. Backstage class for 'Backstage passes to a TAFKAL80ETC concert' items
+4. AgedBrie class for 'Aged Brie' items
+
+The Sulfuras, Backstage and AgedBrie classes inherit properties and methods from the Item class and override Item's methods to update quality and sell_in values in line with specifications for each item type.
+
+When updating the values, the sell_in value gets amended first to reflect the fact that updates take place at the end of each day and the value of sell_in will determine items' quality value.
+
+Once the classes have been created and tested, I designed ItemFactory class that:
+* accepts an array of items
+* uses regex to match the name of each item to a corresponding Class
+* creates an instance of that class for each item
+* There is also a method to create an instance of item class for one item only, if required.
+
+The process is further automated by refactoring of the GuildedRose class, which:
+* iterates through an array of item objects (different types of items)
+* calls the method that update the values of sell_in and quality
+* prints the updated values to the console, if necessary.
+
+The above changes enabled a fast implementation of the Conjured class, which allows to manage the quality of the Conjured item.
+
+The following input array
+
+<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/Guilded%20Rose%20input.png" width='400'>
+
+provides the following output 
+
+<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/Guilded%20Rose%20output.png" width='400'>
