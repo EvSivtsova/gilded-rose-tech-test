@@ -1,5 +1,12 @@
 # Guilded Rose Tech Test
 
+<div align="left">
+  <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/>&nbsp
+  <img src="https://img.shields.io/badge/RSpec-blue?style=for-the-badge&logo=Rspec&logoColor=white" alt="Rspec"/>
+  <img src="https://img.shields.io/badge/Test_coverage:_99.10-blue?style=for-the-badge&logo=Rspec&logoColor=white" alt="Rspec"/>
+</div><br>
+
+
 This is the Makers' Academy challenge with the following requirements:
 
 ## Quality control system requirements
@@ -72,8 +79,8 @@ Technologies used:
 To install the project clone the repository and run `bundle install` the dependencies within bankTechTest folder:
 
 ```
-git clone https://github.com/EvSivtsova/guilded_rose_tech_test.git
-cd guilded_rose_tech_test
+git clone https://github.com/EvSivtsova/guilded-rose-tech-test.git
+cd guilded-rose-tech-test
 bundle install
 ```
 To run the file and print the bank statement required:
@@ -116,8 +123,12 @@ The above changes enabled a fast implementation of the Conjured class, which all
 
 The following input array
 
-<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/Guilded%20Rose%20input.png" width='400'>
+<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-input.png" width='400'>
 
 provides the following output 
 
-<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/Guilded%20Rose%20output.png" width='400'>
+<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-output.png" width='400'>
+
+
+<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-test-coverage.png" width='400'>
+
