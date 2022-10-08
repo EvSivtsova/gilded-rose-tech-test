@@ -130,5 +130,5 @@ provides the following output
 <img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-output.png" width='400'>
 
 
-<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-test-coverage.png" width='400'>
+<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-tech-coverage.png" width='400'>
 
