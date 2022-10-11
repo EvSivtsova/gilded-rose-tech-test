@@ -1,4 +1,4 @@
-# Guilded Rose Tech Test
+# Gilded Rose Tech Test
 
 <div align="left">
   <img src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"/>&nbsp
@@ -79,13 +79,13 @@ Technologies used:
 To install the project clone the repository and run `bundle install` the dependencies within bankTechTest folder:
 
 ```
-git clone https://github.com/EvSivtsova/guilded-rose-tech-test.git
-cd guilded-rose-tech-test
+git clone https://github.com/EvSivtsova/gilded-rose-tech-test.git
+cd gilded-rose-tech-test
 bundle install
 ```
 To run the file and print the bank statement required:
 
-`ruby guilded_rose.rb`
+`ruby gilded_rose.rb`
 
 To run tests and lint the code use:
 
@@ -114,7 +114,7 @@ Once the classes have been created and tested, I designed ItemFactory class that
 * creates an instance of that class for each item
 * There is also a method to create an instance of item class for one item only, if required.
 
-The process is further automated by refactoring of the GuildedRose class, which:
+The process is further automated by refactoring of the GildedRose class, which:
 * iterates through an array of item objects (different types of items)
 * calls the method that update the values of sell_in and quality
 * prints the updated values to the console, if necessary.
@@ -123,12 +123,12 @@ The above changes enabled a fast implementation of the Conjured class, which all
 
 The following input array
 
-<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-input.png" width='400'>
+<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-input.png" width='400'>
 
 provides the following output 
 
-<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-output.png" width='400'>
+<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-output.png" width='400'>
 
+<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-test-coverage.png" width='400'>
 
-<img src="https://github.com/EvSivtsova/guilded_rose_tech_test/blob/main/outputs/guilded-rose-tech-coverage.png" width='400'>
-
+<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-rubocop.png" width='400'>

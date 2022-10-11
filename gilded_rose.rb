@@ -1,7 +1,7 @@
 require_relative './lib/item_factory'
 require_relative './data'
 
-class GuildedRose
+class GildedRose
   attr_reader :items
   def initialize(items)
     @items = items
@@ -19,7 +19,7 @@ end
 if __FILE__ == $PROGRAM_NAME
   factory = ItemFactory.new
   factory.create_items(@items_array)
-  guilded_rose = GuildedRose.new(factory.items)
-  guilded_rose.update_quality_and_sell_in
-  puts guilded_rose.items_to_string
+  gilded_rose = GildedRose.new(factory.items)
+  gilded_rose.update_quality_and_sell_in
+  puts gilded_rose.items_to_string
 end

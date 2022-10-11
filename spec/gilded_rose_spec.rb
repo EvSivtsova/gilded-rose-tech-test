@@ -1,8 +1,8 @@
-require_relative "../guilded_rose"
+require_relative "../gilded_rose"
 
 # the integration tests are used to test for class inheritance
 
-describe GuildedRose do
+describe GildedRose do
   it "updates quality and sell_in values of a range of items in an array" do
     items_array = [['Aged Brie', 10, 30],
                 ['Sulfuras, Hand of Ragnaros', 6, 40],
@@ -11,13 +11,13 @@ describe GuildedRose do
                 ['Conjured', 10, 10]]
     factory = ItemFactory.new
     factory.create_items(items_array)
-    guilded_rose = GuildedRose.new(factory.items)
-    guilded_rose.update_quality_and_sell_in
-    expect(guilded_rose.items[0].to_string).to eq 'Aged Brie, 9, 31'
-    expect(guilded_rose.items[1].to_string).to eq 'Sulfuras, Hand of Ragnaros, 6, 40'
-    expect(guilded_rose.items[2].to_string).to eq 'Backstage passes to a TAFKAL80ETC concert, 7, 12'
-    expect(guilded_rose.items[3].to_string).to eq 'Random item, 9, 9'
-    expect(guilded_rose.items[4].to_string).to eq 'Conjured, 9, 8'
+    gilded_rose = GildedRose.new(factory.items)
+    gilded_rose.update_quality_and_sell_in
+    expect(gilded_rose.items[0].to_string).to eq 'Aged Brie, 9, 31'
+    expect(gilded_rose.items[1].to_string).to eq 'Sulfuras, Hand of Ragnaros, 6, 40'
+    expect(gilded_rose.items[2].to_string).to eq 'Backstage passes to a TAFKAL80ETC concert, 7, 12'
+    expect(gilded_rose.items[3].to_string).to eq 'Random item, 9, 9'
+    expect(gilded_rose.items[4].to_string).to eq 'Conjured, 9, 8'
   end
 
   it "returns updated object properties as a string" do
@@ -28,13 +28,13 @@ describe GuildedRose do
                 ['Conjured', 10, 10]]
     factory = ItemFactory.new
     factory.create_items(items_array)
-    guilded_rose = GuildedRose.new(factory.items)
-    guilded_rose.update_quality_and_sell_in
-    expect(guilded_rose.items_to_string).to include('Aged Brie, 9, 31')
-    expect(guilded_rose.items_to_string).to include('Sulfuras, Hand of Ragnaros, 6, 40')
-    expect(guilded_rose.items_to_string).to include('Backstage passes to a TAFKAL80ETC concert, 7, 12')
-    expect(guilded_rose.items_to_string).to include('Random item, 9, 9')
-    expect(guilded_rose.items_to_string).to include('Conjured, 9, 8')
+    gilded_rose = GildedRose.new(factory.items)
+    gilded_rose.update_quality_and_sell_in
+    expect(gilded_rose.items_to_string).to include('Aged Brie, 9, 31')
+    expect(gilded_rose.items_to_string).to include('Sulfuras, Hand of Ragnaros, 6, 40')
+    expect(gilded_rose.items_to_string).to include('Backstage passes to a TAFKAL80ETC concert, 7, 12')
+    expect(gilded_rose.items_to_string).to include('Random item, 9, 9')
+    expect(gilded_rose.items_to_string).to include('Conjured, 9, 8')
   end
 
   context "when input is incorrect" do
