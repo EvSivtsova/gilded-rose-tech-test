@@ -123,12 +123,12 @@ The above changes enabled a fast implementation of the Conjured class, which all
 
 The following input array
 
-<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-input.png" width='400'>
+<img src="https://github.com/EvSivtsova/gilded-rose-tech-test/blob/main/outputs/gilded-rose-input.png" width='400'>
 
 provides the following output 
 
-<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-output.png" width='400'>
+<img src="https://github.com/EvSivtsova/gilded-rose-tech-test/blob/main/outputs/gilded-rose-output.png" width='400'>
 
-<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-test-coverage.png" width='400'>
+<img src="https://github.com/EvSivtsova/gilded-rose-tech-test/blob/main/outputs/gilded-rose-test-coverage.png" width='400'>
 
-<img src="https://github.com/EvSivtsova/gilded_rose_tech_test/blob/main/outputs/gilded-rose-rubocop.png" width='400'>
+<img src="https://github.com/EvSivtsova/gilded-rose-tech-test/blob/main/outputs/gilded-rose-rubocop.png" width='400'>
