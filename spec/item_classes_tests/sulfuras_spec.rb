@@ -8,6 +8,11 @@ describe Sulfuras do
       expect(Sulfuras).to be < Item
     end
 
+    it 'is an instance of Sulfuras class' do
+      item = Sulfuras.new('sulfuras', 10, 30)
+      expect(item).to be_instance_of(Sulfuras)
+    end
+
     it "constructs and returns item's attributes as a string" do
       item = Sulfuras.new('sulfuras', 10, 30)
       expect(item.to_string).to eq "sulfuras, 10, 30"
