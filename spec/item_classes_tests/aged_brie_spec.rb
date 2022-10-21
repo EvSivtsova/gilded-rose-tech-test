@@ -8,6 +8,11 @@ describe AgedBrie do
       expect(AgedBrie).to be < Item
     end
 
+    it 'is an instance of AgedBrie class' do
+      item = AgedBrie.new('aged brie', 10, 30)
+      expect(item).to be_instance_of(AgedBrie)
+    end
+
     it "constructs and returns item's attributes as a string" do
       item = AgedBrie.new('aged brie', 10, 30)
       expect(item.to_string).to eq "aged brie, 10, 30"
