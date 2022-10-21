@@ -2,6 +2,11 @@ require 'item'
 
 describe Item do
   context "when constructing" do
+    it 'is an instance of Item class' do
+      item = Item.new('orange juice', 10, 30)
+      expect(item).to be_instance_of(Item)
+    end
+    
     it "constructs and returns item's attributes as a string" do
       item = Item.new('orange juice', 10, 30)
       expect(item.to_string).to eq "orange juice, 10, 30"
