@@ -3,6 +3,12 @@ require_relative "../gilded_rose"
 # the integration tests are used to test for class inheritance
 
 describe GildedRose do
+  it 'is an instance of GildedRose class' do
+    items_double = [{name: 'Aged Brie', sell_in: 10, quality: 30 }]
+    gilded_rose = GildedRose.new( items_double)
+    expect(gilded_rose).to be_instance_of(GildedRose)
+  end
+
   it "updates quality and sell_in values of a range of items in an array" do
     items_array = [['Aged Brie', 10, 30],
                 ['Sulfuras, Hand of Ragnaros', 6, 40],
