@@ -4,6 +4,11 @@ require 'item_factory'
 
 describe ItemFactory do
   context "when constructing" do
+    it 'is an instance of ItemFactory class' do
+      items = ItemFactory.new
+      expect(items).to be_instance_of(ItemFactory)
+    end
+
     it "initiliazes with the hash of special item types: regex as key and corresponding class as values" do
       items = ItemFactory.new
       expect(items.item_types).to include({
