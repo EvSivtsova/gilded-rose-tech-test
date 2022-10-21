@@ -8,6 +8,11 @@ describe Conjured do
       expect(Conjured).to be < Item
     end
 
+    it 'is an instance of Conjured class' do
+      item = Conjured.new('conjured', 10, 30)
+      expect(item).to be_instance_of(Conjured)
+    end
+
     it "constructs and returns item's attributes as a string" do
       item = Conjured.new('conjured', 10, 30)
       expect(item.to_string).to eq "conjured, 10, 30"
